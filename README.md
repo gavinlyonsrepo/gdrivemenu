@@ -6,8 +6,8 @@ Overview
 * Description: A menu-driven command line interface wrapper 
 for google drive client *gdrive*.
 Provides 10 options to allow user to sync local data with google drive
-and search contents and information. 
-* Main Author: Gavin Lyons
+and search contents and information. Written in bash.
+* Author: Gavin Lyons
 * URL:  [gdrivemenu](https://github.com/gavinlyonsrepo/gdrivemenu)
 
 Table of contents
@@ -29,16 +29,28 @@ Table of contents
 
 Installation
 -----------------------------------------------
-For Linux OS users only.
-The program consists of a single shell script. gdrivemenu.sh.
-Download, copy the script, make it executable and run.
+
+A  Personal Package Archives (PPA) has been created on Ubuntu
+package building and hosting section of launchpad site 
+called gdrivemenu.
+
+To install this on your system run commands in terminal
+
+```sh
+# Add PPA 
+sudo add-apt-repository ppa:typematrix/gdrivemenu
+# Update repositories 
+sudo apt update
+# Install the package 
+sudo apt install gdrivemenu
+```
 
 Usage
 -------------------------------------------
 To run in terminal type
 
 ```sh
-gdrivemenu.sh
+gdrivemenu
 ```
 
 Files and setup
@@ -46,7 +58,7 @@ Files and setup
 
 | File Path | Description |
 | ------ | ------ |
-| gdrivemenu.sh | scirpt |
+| /usr/bin/gdrivemenu | bash script |
 | $HOME/.config/gdrivemenu/gdrivemenu.conf | config file, user made, not installed |
 
 The user must  install and set up *gdrive* first.
@@ -59,9 +71,9 @@ The *gdrive mkdir* command can do this.
 Config file: The user must create a config file.
 The config file holds 4 sync paths. 
 "gdrivedestX" is remote google drive directory file ID.
-and "gdriveSourceX" is the path to local directory source folder.
-Where the X is a number between 1 and 4. 
-Just copy and paste this into file and change paths for your setup.
+"gdriveSourceX" is the path to local directory source folder.
+Where the X is a number from 1 to 4. 
+Just copy and paste below exmaple into file and change paths for your setup.
 alternatively a config file template with dummy values 
 is in documentation folder
 of the repository.
@@ -77,6 +89,10 @@ gdrivemenu.conf file setup example:
  gdriveDest3="foo123666689"
  gdriveDest4="foo123662222"
 ```
+
+
+A Readme, desktop entry and icon are available in repository.
+
 
 Output 
 -------------------------------------
@@ -144,7 +160,7 @@ History
 Copyright
 ---------
 Copyright (C) 2017 Gavin Lyons 
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public license published by
-the Free Software Foundation, see LICENSE.md in documentation section 
+
+see LICENSE.md in documentation section 
+
 for more details

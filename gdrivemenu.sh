@@ -118,15 +118,10 @@ function exitHandlerFunc
 
 
 #FUNCTION HEADER
-# NAME :           readconfigFunc
-# DESCRIPTION:read the config file into program if not there   
-#use hardcoded defaults config file is for paths for backup function
-#Called when needed by program also can be called by user option or main menu
-# passed USERCALL
-# INPUTS $1 USERCALL when called by user
-# OUTPUTS : sets paths for backup function 
-# PROCESS : read $DEST5/cylonCfg.conf
-#NOTES :   file is optional       
+# NAME : readconfigFunc
+# DESCRIPTION:read the config file into program 
+# PROCESS : read $DESTCONFIG_FILE  
+    
 function readconfigFunc
 {
 	#changepath
@@ -149,22 +144,21 @@ function readconfigFunc
 }
 
 #FUNCTION HEADER
-# NAME :         gdriveFunc
+# NAME :  gdriveFunc
 # DESCRIPTION:gdrive sync to google drive
-# INPUTS:  configfile from readconfigFunc   
+# INPUTS:  configfile vars from readconfigFunc   
 # PROCESS : syncs to google drive + provides information and search 
-#NOTES :    needs gdrive and gnu-netcat installed 
 function gdriveFunc
 {
 clear
 msgFunc line
-msgFunc green "gdrive, connect to google drive via the terminal" 
-msgFunc norm "gdrivemenu : CLI wrapper for gdrive"
+msgFunc green "gdrive : connect to google drive via the terminal." 
+msgFunc green "gdrivemenu : CLI wrapper for gdrive."
 msgFunc line
 gdrive version
 
 while true; do # loop until exit
-msgFunc blue "gdrive options"
+msgFunc blue "gdrivemenu options"
 local optionsGdArr=("List all syncable directories on drive" "Sync local directory to google drive: $gdriveSource1" \
 "Sync local directory to google drive: $gdriveSource2" "Sync local directory to google drive: $gdriveSource3" \
  "Sync local directory to google drive: $gdriveSource4" "List content of syncable directory" \
