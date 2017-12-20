@@ -50,7 +50,7 @@ Usage
 To run in terminal type
 
 ```sh
-gdrivemenu
+gdrivemenu.sh
 ```
 
 Files and setup
