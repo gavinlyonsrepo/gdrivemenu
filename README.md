@@ -34,6 +34,8 @@ A  Personal Package Archives (PPA) has been created on Ubuntu
 package building and hosting section of launchpad site 
 called gdrivemenu.
 
+Package built on Ubuntu 16.04 LTS (Xenial Xerus) 64bit
+
 To install this on your system run commands in terminal
 
 ```sh
@@ -43,6 +45,14 @@ sudo add-apt-repository ppa:typematrix/gdrivemenu
 sudo apt update
 # Install the package 
 sudo apt install gdrivemenu
+```
+
+**or** Download and copy files manually as per file section table.
+
+**or** Download and run the makefile 
+
+```sh
+sudo make install
 ```
 
 Usage
@@ -58,8 +68,10 @@ Files and setup
 
 | File Path | Description |
 | ------ | ------ |
-| /usr/bin/gdrivemenu | bash script |
+| /usr/bin/gdrivemenu.sh | bash script |
 | $HOME/.config/gdrivemenu/gdrivemenu.conf | config file, user made, not installed |
+| /usr/share/pixmaps/gdrivemenuicon.png | program icon |
+| /usr/share/applications/gdrivemenu.desktop | desktop entry file |
 
 The user must  install and set up *gdrive* first.
 They must then create 1-4 folders on Google drive and store the file ID
