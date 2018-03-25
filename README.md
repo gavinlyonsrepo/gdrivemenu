@@ -47,11 +47,15 @@ sudo apt update
 sudo apt install gdrivemenu
 ```
 
-**or** Download and copy files manually as per file section table.
+**or**
+Download latest fixed release and run the makefile as per terminal commands below for version 1.1 latest release at time of writing
 
+```sh
 curl -sL https://github.com/gavinlyonsrepo/gdrivemenu/archive/1.1.tar.gz | tar xz
 cd  gdrivemenu-1.1
 sudo make install
+```
+
 
 Usage
 -------------------------------------------
