@@ -4,10 +4,10 @@
 #name: Gdrive menu
 #Title : Gdrive menu
 #Description: A CLI wrapper for the CLI google drive client "gdrive"
-#Version : 1.0-1
-#License: GPL
+#Version : see changelog
+#License: MIT expat
 #Written by: Gavin Lyons
-#URL: 
+#URL: https://github.com/gavinlyonsrepo/gdrivemenu
 
 #=======================GLOBAL VARIABLES SETUP=============================
 #colours for printf
@@ -24,7 +24,7 @@ PS3="${BLUE}By your command:${NORMAL}"
 DESTCONFIG_PATH="$HOME/.config/gdrivemenu/"
 mkdir -p "$DESTCONFIG_PATH"
 DESTCONFIG_FILE="gdrivemenu.conf"
-
+DESTREADME="/usr/share/doc/gdrivemenu/" # readme
 
 #FUNCTION HEADER
 # NAME : msgFunc
@@ -101,6 +101,9 @@ function exitHandlerFunc
 			DESTCONFIG) 
 				msgFunc red "Path not found to Destination directory"
 				msgFunc norm "$DESTCONFIG_PATH" ;;
+			DESTREADME) 
+				msgFunc red "Problem with config file found: "
+				msgFunc red "$DESTREADME" ;;
 			fileerror) msgFunc red "Problem with config file found: "
 			msgFunc red "$DESTCONFIG_FILE"
 			msgFunc red "File error $2"  ;;
@@ -155,6 +158,7 @@ msgFunc line
 msgFunc green "gdrive : connect to google drive via the terminal." 
 msgFunc green "gdrivemenu : CLI wrapper for gdrive."
 msgFunc line
+msgFunc norm "$(dpkg -s gdrive_menu 2> /dev/null | grep Version)"
 gdrive version
 
 while true; do # loop until exit
@@ -162,8 +166,8 @@ msgFunc blue "gdrivemenu options"
 local optionsGdArr=("List all syncable directories on drive" "Sync local directory to google drive: $gdriveSource1" \
 "Sync local directory to google drive: $gdriveSource2" "Sync local directory to google drive: $gdriveSource3" \
  "Sync local directory to google drive: $gdriveSource4" "List content of syncable directory" \
- "Google drive metadata, quota usage" "List files" "Get file info" "gdrive version"  \
-  "Quit")
+ "Google drive metadata, quota usage" "List files" "Get file info" "gdrive version" "Help"  \
+  "Config file" "Quit")
 	select  choiceGD in "${optionsGdArr[@]}"
 	do
 	case "$choiceGD" in
@@ -250,7 +254,21 @@ local optionsGdArr=("List all syncable directories on drive" "Sync local directo
 			msgFunc green "Gdrive version"
 			gdrive version
 		;;
-		*)return  ;;
+		"${optionsGdArr[10]}")# readme display
+			msgFunc line
+			msgFunc green "Displaying grive_menu README.md file at $DEST6"
+			cd "$DESTREADME"  || exitHandlerFunc DESTREADME
+			less README.md || less README.md.gz
+			msgFunc green "Done!" 
+			msgFunc line
+			msgFunc anykey
+		;;
+		"${optionsGdArr[11]}") # config file
+			msgFunc norm "The config  file: $DESTCONFIG_FILE , is at: $DESTCONFIG_PATH"
+		;;
+		*)#exit
+			exitHandlerFunc exitout 
+		;;
 	esac
 	break 
 	done

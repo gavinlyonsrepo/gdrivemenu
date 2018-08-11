@@ -7,12 +7,11 @@ all:
 install:
 	@echo 'Making directories...'
 	@mkdir -vp $(PREFIX)/bin
-	@mkdir -vp $(PREFIX)/lib/gdrivemenu/modules
 	@mkdir -vp $(PREFIX)/share/doc/gdrivemenu
 	
 	@echo 'Installing script...'
 	@cp -vp gdrivemenu.sh $(PREFIX)/bin
-	@chmod 755 $(PREFIX)/bin/gdrivemenu.sh
+	@chmod 755 $(PREFIX)/bin/gdrivemenu
 	
 	@echo 'Installing Readme...'
 	@cp -vp README.md  $(PREFIX)/share/doc/gdrivemenu

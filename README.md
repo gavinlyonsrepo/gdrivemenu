@@ -34,7 +34,7 @@ A  Personal Package Archives (PPA) has been created on Ubuntu
 package building and hosting section of launchpad site 
 called gdrivemenu.
 
-Package built on Ubuntu 16.04 LTS (Xenial Xerus) 64bit
+Package built on  Ubuntu 18.04 LTS (Bionic Beaver) 64bit
 
 To install this on your system run commands in terminal
 
@@ -48,11 +48,11 @@ sudo apt install gdrivemenu
 ```
 
 **or**
-Download latest fixed release and run the makefile as per terminal commands below for version 1.1 latest release at time of writing
+Download latest fixed release and run the makefile as per terminal commands below for version 1.2 latest release at time of writing
 
 ```sh
-curl -sL https://github.com/gavinlyonsrepo/gdrivemenu/archive/1.1.tar.gz | tar xz
-cd  gdrivemenu-1.1
+curl -sL https://github.com/gavinlyonsrepo/gdrivemenu/archive/1.2.tar.gz | tar xz
+cd  gdrivemenu-1.2
 sudo make install
 ```
 
@@ -62,7 +62,7 @@ Usage
 To run in terminal type
 
 ```sh
-gdrivemenu.sh
+gdrivemenu
 ```
 
 Files and setup
@@ -70,7 +70,7 @@ Files and setup
 
 | File Path | Description |
 | ------ | ------ |
-| /usr/bin/gdrivemenu.sh | bash script |
+| /usr/bin/gdrivemenu | bash script |
 | $HOME/.config/gdrivemenu/gdrivemenu.conf | config file, user made, not installed |
 | /usr/share/pixmaps/gdrivemenuicon.png | program icon |
 | /usr/share/applications/gdrivemenu.desktop | desktop entry file |
@@ -138,7 +138,8 @@ Features
 	* List files
 	* gdrive about
 	* Get file info
-
+	* Display Readme
+	* Config file.
 
 See Also
 -----------
