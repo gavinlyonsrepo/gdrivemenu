@@ -2,7 +2,7 @@
 Name=gdrivemenu
 GenericName=gdrive wrapper
 Comment=gdrivemenu , A menu based CLI wrapper for google drive client, gdrive.
-Exec=gdrivemenu.sh
+Exec=gdrivemenu
 Icon=gdrivemenuicon
 Categories=System;
 Type=Application
