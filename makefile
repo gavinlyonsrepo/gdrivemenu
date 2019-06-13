@@ -10,7 +10,7 @@ install:
 	@mkdir -vp $(PREFIX)/share/doc/gdrivemenu
 	
 	@echo 'Installing script...'
-	@cp -vp gdrivemenu.sh $(PREFIX)/bin
+	@cp -vp gdrivemenu $(PREFIX)/bin
 	@chmod 755 $(PREFIX)/bin/gdrivemenu
 	
 	@echo 'Installing Readme...'
