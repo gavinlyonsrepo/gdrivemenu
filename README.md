@@ -30,24 +30,7 @@ Table of contents
 Installation
 -----------------------------------------------
 
-A  Personal Package Archives (PPA) has been created on Ubuntu
-package building and hosting section of launchpad site 
-called gdrivemenu.
 
-Package built on  Ubuntu 18.04 LTS (Bionic Beaver) 64bit
-
-To install this on your system run commands in terminal
-
-```sh
-# Add PPA 
-sudo add-apt-repository ppa:typematrix/gdrivemenu
-# Update repositories 
-sudo apt update
-# Install the package 
-sudo apt install gdrivemenu
-```
-
-**or**
 Download latest fixed release and run the makefile as per terminal commands below for version 1.2 latest release at time of writing
 
 ```sh
