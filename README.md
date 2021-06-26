@@ -18,15 +18,12 @@ Table of contents
   * [Installation](#installation)
   * [Usage](#usage)
   * [Files and setup](#files-and-setup)
-  * [Output](#output)
+
   * [Dependencies](#dependencies)
   * [Features](#features)
   * [See Also](#see-also)
-  * [Communication](#communication)
-  * [History](#history)
-  * [Copyright](#copyright)
-  
 
+ 
 Installation
 -----------------------------------------------
 
@@ -87,12 +84,8 @@ gdrivemenu.conf file setup example:
  gdriveDest4="foo123662222"
 ```
 
-
 A Readme, desktop entry and icon are available in repository.
 
-
-Output 
--------------------------------------
 Some options produce output, like file lists for example.
 Output folders are created with following time/date stamp syntax HHMM-DDMONYY-X 
 in the /tmp/ folder.
@@ -140,25 +133,3 @@ File list options API help:
 
 [order parameters](https://godoc.org/google.golang.org/api/drive/v3#FilesListCall.OrderBy)
 
-Communication
------------
-If you should find a bug or you have any other query, 
-please send a report.
-Pull requests, suggestions for improvements
-and new features welcome.
-* Contact: Upstream repo at github site below or glyons66@hotmail.com
-* Upstream repository: [gdrivemenu](https://github.com/gavinlyonsrepo/gdrivemenu)
-
-History
-------------------
-
-* See changelog.md in documentation section for version control history
-
- 
-Copyright
----------
-Copyright (C) 2017 Gavin Lyons 
-
-see LICENSE.md in documentation section 
-
-for more details
